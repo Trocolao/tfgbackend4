@@ -34,7 +34,7 @@ Route::controller(ResenaController::class)->group(function () {
     Route::put('resenas/{id}', 'update');
     Route::delete('resenas/{id}', 'destroy');
     Route::get('resenas', 'index');
-    Route::get('resena/{id}', 'show');
+    Route::get('resenas/{id}', 'show');
 });
 Route::prefix('eventos')->group(function () {
     Route::get('/', [EventoController::class, 'index']);
