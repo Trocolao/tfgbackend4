@@ -27,6 +27,7 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('refresh', 'refresh');
     Route::get('me', 'me');
     Route::get('meId', 'meId');
+    Route::get('isAdmin', 'isAdmin');
 
 });
 Route::controller(ResenaController::class)->group(function () {
@@ -63,6 +64,8 @@ Route::controller(PedidoController::class)->group(function () {
     Route::put('pedidos/{id}', 'update');
     Route::delete('pedidos/{id}', 'destroy');
     Route::get('pedidos', 'index');
+    Route::get('pedidos/mine', 'misPedidos');
+
     Route::get('pedidos/{id}', 'show');
 });
 
